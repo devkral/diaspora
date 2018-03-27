@@ -4,7 +4,10 @@ rvm:
   - 2.4.2
   - 2.3.5
 
+bundler_args: --with pam
+
 env:
+  global: ALLOW_NOPAM=true
   - DB=postgresql BUILD_TYPE=cucumber
   - DB=mysql BUILD_TYPE=cucumber
   - DB=postgresql BUILD_TYPE=other
